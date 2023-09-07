@@ -1,11 +1,11 @@
 module.exports = function (api) {
-  api.cache(true); // 这句要加上
+  api.cache(true);
   const presets = [
     [
       "@babel/preset-env",
       {
         targets: {
-          ie: '9',
+          ie: "9",
           edge: "17",
           firefox: "60",
           chrome: "67",

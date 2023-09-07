@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ESLintPlugin = require('eslint-webpack-plugin');
 module.exports = function () {
   return {
     mode: "development",
@@ -45,6 +46,7 @@ module.exports = function () {
         template: path.join(__dirname, "../../public/index.html"),
         filename: "index.html",
       }),
+      new ESLintPlugin()
     ],
   };
 };
